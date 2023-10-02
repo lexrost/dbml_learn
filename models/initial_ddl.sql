@@ -72,45 +72,45 @@ comment on table vendors is 'list of contracts with merchants signed and drafts'
 comment on column contracts.merchant_id is 'merchant uninque idetifier points to merchant.id ';
 comment on column contracts.create_at is 'timestamp when draft was created in the system';
 comment on column contracts.updated_at is 'timestamp when this row was updated';
-comment on column contracts.delivery_fee is 'percent of order that should be paid to wolt for deliveries';
-comment on column contracts.pickup_fee is 'percent of order that should be paid paid to wolt for pickups';
-comment on column contracts.tablet_fee is 'amount of euro that should be paid paid to wolt for providing tablet';
-comment on column contracts.pictures_fee is 'amount of euro that should be paid paid to wolt for providing photoshoot service';
+comment on column contracts.delivery_fee is 'percent of order that should be paid to acne for deliveries';
+comment on column contracts.pickup_fee is 'percent of order that should be paid paid to acne for pickups';
+comment on column contracts.tablet_fee is 'amount of euro that should be paid paid to acne for providing tablet';
+comment on column contracts.pictures_fee is 'amount of euro that should be paid paid to acne for providing photoshoot service';
 comment on column contracts.starts_at is 'timestamp when contract starts';
 comment on column contracts.expires_at is 'timestamp when contract should end';
-comment on column contracts.signed_at is 'timestamp when contract was signed by both parties wolt and merchant';
+comment on column contracts.signed_at is 'timestamp when contract was signed by both parties acne and merchant';
 comment on column contracts.signed_by is 'link to user id that has signed the conrtact on behalf of partner';
 comment on column contracts.auto_renewal_term is 'if contract has a auto renewal term';
 comment on column contracts.signed_contract_link is 'url to photocopy of the contract or esigned versions of the contract';
 comment on column contracts.contract_template_id is 'link to template this contract is based on';
 
-create table if not exists products ( 
-    id varchar comment 'unique id of a product'
-    , created_at TIMESTAMP  comment 'datetime of users id created within db'
-    , updated_at TIMESTAMP comment 'datetime of product record was updated within db'
-    , name varchar comment 'name of the product'
-    , vendor_id varchar comment 'id of the vendor that produces the product'
-    , default_variant_id varchar comment 'default sku for the product'
-    , primary key (id)
-    , foreign key (default_variant_id) REFERENCES product_variants.id 
-    , foreign key (vendor_id) REFERENCES vendors.id 
-    )
-comment = 'list of products registered within our sytem'
-; 
+-- create table if not exists products ( 
+--     id varchar comment 'unique id of a product'
+--     , created_at TIMESTAMP  comment 'datetime of users id created within db'
+--     , updated_at TIMESTAMP comment 'datetime of product record was updated within db'
+--     , name varchar comment 'name of the product'
+--     , vendor_id varchar comment 'id of the vendor that produces the product'
+--     , default_variant_id varchar comment 'default sku for the product'
+--     , primary key (id)
+--     , foreign key (default_variant_id) REFERENCES product_variants.id 
+--     , foreign key (vendor_id) REFERENCES vendors.id 
+--     )
+-- comment = 'list of products registered within our sytem'
+-- ; 
 
--- pipedrive domain / onboarding 
-create table deals (
-    id int 
-    , created_at timestamp
-    , updated_at timestamp 
-    , owner int 
-    , organization int 
-    , contact int 
-    , deal_stage 
-    , deal_enter_stage_at 
-    , funnel_id int 
-    , 
-); 
+-- -- pipedrive domain / onboarding 
+-- create table deals (
+--     id int 
+--     , created_at timestamp
+--     , updated_at timestamp 
+--     , owner int 
+--     , organization int 
+--     , contact int 
+--     , deal_stage 
+--     , deal_enter_stage_at 
+--     , funnel_id int 
+--     , 
+-- ); 
 
 -- create table deals_event_log (
 --     id varchar 
@@ -121,7 +121,7 @@ create table deals (
 
 -- create table deals_owners (
 --     id varchar 
---     , wolt_id int 
+--     , acne_id int 
 --     , email 
 --     , name 
 -- )
