@@ -6,7 +6,6 @@ playground for dbdocs
 4. publish project 
 
 
-
 ## prerequisits
 
 install dbdocs  `npm install -g dbdocs`\
@@ -25,5 +24,7 @@ run `dbdocs login` \
 copy token and add it to cli \
 run `dbdocs build initial_ddl.sql` \
 choose name for the project \
-go to web interface 
+go to web interface
+
+this is neat isn't? 
 
